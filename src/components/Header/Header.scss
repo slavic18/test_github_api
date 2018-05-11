@@ -1,0 +1,22 @@
+.header {
+  position: relative;
+  background: #000;
+  padding: 15px 40px;
+  .button {
+    position: absolute;
+    left: 10px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  .header__title {
+    color: #fff;
+    text-align: center;
+
+  }
+}
+

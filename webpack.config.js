@@ -2,7 +2,7 @@
 var app_root = 'src'; // the app root folder: src, etc
 var path = require('path');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var projectDir = path.join(__dirname, '../src/static');
+var projectDir = path.join(__dirname, '../src/public');
 const webpack = require('webpack');
 
 module.exports = {
@@ -15,15 +15,10 @@ module.exports = {
     __dirname + '/' + app_root + '/index.js',
   ],
   output: {
-    path: __dirname + '/public/js',
-    publicPath: 'http://127.0.0.1:8081/js',
+    path: projectDir + '/js',
+    publicPath: 'js/',
     filename: 'bundle.js',
   },
-  // output: {
-  //   path: projectDir + '/js',
-  //   publicPath: 'js/',
-  //   filename: 'bundle.js',
-  // },
   resolveLoader: {
     moduleExtensions: ["-loader"]
   },
@@ -43,14 +38,6 @@ module.exports = {
         test: /\.css$/,
         loaders: ['style', 'css'],
       },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
-      {
-        test: /\.tsv?$/,
-        loader: 'dsv-file-loader'
-      } //will load all .csv files with dsv-file-loader by default
     ],
   },
   devServer: {

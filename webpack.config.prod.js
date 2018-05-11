@@ -3,7 +3,7 @@ var webpack = require("webpack");
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var projectDir = path.join(__dirname, '../src/static');
+var projectDir = path.join(__dirname, './public');
 module.exports = require('./webpack.config.js');    // inherit from the main config file
 // disable the hot reload
 module.exports.entry = [
@@ -12,18 +12,17 @@ module.exports.entry = [
 ];
 
 module.exports.output = {
-    path: projectDir + '/js',
-    publicPath: 'js/',
-    filename: 'bundle.js',
+  path: projectDir + '/js',
+  filename: 'bundle.js',
 };
 
-module.exports.plugins = [
-  new CleanWebpackPlugin(['../css/main.css', 'js/bundle.js'], {
-    root: projectDir,
-    verbose: true,
-    dry: false, // true for simulation
-  }),
-];
+// module.exports.plugins = [
+//   new CleanWebpackPlugin(['../css/main.css', 'js/bundle.js'], {
+//     root: projectDir,
+//     verbose: true,
+//     dry: false, // true for simulation
+//   }),
+// ];
 
 
 

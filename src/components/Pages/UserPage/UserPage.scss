@@ -1,0 +1,32 @@
+.user__list__item {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  margin-bottom: 10px;
+  .user__list__item__avatar {
+    float: left;
+    margin-right: 20px;
+    max-width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    .user__list__item__avatar__image {
+      width: 100%;
+    }
+  }
+
+  .user__list__item__description__container {
+    float: left;
+    width: 80%;
+    border-bottom: 1px solid #999;
+    .user__list__item__title {
+      margin-bottom: 2px;
+    }
+    .user__list__item__location {
+      color: gray;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+}
