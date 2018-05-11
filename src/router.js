@@ -1,7 +1,7 @@
 import 'raf/polyfill';
 import 'babel-polyfill';
 import React from "react";
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 
 import App from './components/App/App';
@@ -14,7 +14,7 @@ if (module.hot) {
   module.hot.accept();
 }
 
-export default <BrowserRouter>
+export default <HashRouter>
   <App>
     <Switch>
       <Route exact path="/" component={HomePage}/>
@@ -22,4 +22,4 @@ export default <BrowserRouter>
       <Route component={ErrorPage}/>
     </Switch>
   </App>
-</BrowserRouter>
+</HashRouter>
