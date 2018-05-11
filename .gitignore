@@ -1,0 +1,6 @@
+.idea
+.idea/*
+.sass-cache
+.scss-lint.yml
+node_modules
+package-lock.json

@@ -1,0 +1,7 @@
+--recursive
+--require babel-polyfill
+--require raf/polyfill
+--compilers js:babel-register
+--require ignore-styles ./src/**/*.test.js
+--reporter spec
+-r jsdom-global/register
